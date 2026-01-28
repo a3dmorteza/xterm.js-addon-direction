@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1a1a1a;
+  color: #fff;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+
+h1 {
+  color: #007acc;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  color: #858585;
+  font-size: 1.1rem;
+}
+
+.demo-area {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+#terminal-container {
+  background: #000;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+#terminal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.controls {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.controls h2 {
+  color: #007acc;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.control-group {
+  margin-bottom: 25px;
+}
+
+.control-group h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  background: #005d9e;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn.ltr {
+  background: #2d7d46;
+}
+
+.btn.ltr:hover {
+  background: #1e5c32;
+}
+
+.btn.rtl {
+  background: #c42e2e;
+}
+
+.btn.rtl:hover {
+  background: #9a2323;
+}
+
+.instructions {
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.instructions h2 {
+  color: #007acc;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.instructions ul {
+  list-style-position: inside;
+  margin-left: 10px;
+}
+
+.instructions li {
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.code-block {
+  background: #1a1a1a;
+  border-left: 4px solid #007acc;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 4px;
+  font-family: 'Consolas', monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.status-indicator {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #2d7d46;
+}
+
+.status-indicator.active {
+  background: #2d7d46;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.language-examples {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.language-box {
+  background: #333;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.language-box h4 {
+  margin-bottom: 10px;
+  color: #007acc;
+}
+
+@media (max-width: 768px) {
+  .demo-area {
+    grid-template-columns: 1fr;
+  }
+
+  .language-examples {
+    grid-template-columns: 1fr;
+  }
+}

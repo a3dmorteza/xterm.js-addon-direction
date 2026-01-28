@@ -1,0 +1,92 @@
+{
+  "name": "@a3dmorteza/xterm.js-addon-direction",
+  "version": "0.1.0",
+  "description": "Support Switching direction between RTL (Right-to-Left) and LTR (Left-to-Right) for xterm.js terminal",
+  "author": {
+    "name": "Seyed Morteza Hosseini",
+    "email": "a3dmorteza@gmail.com",
+    "url": "https://github.com/a3dmorteza"
+  },
+  "main": "dist/addon-direction.js",
+  "module": "dist/addon-direction.esm.js",
+  "types": "typings/addon-direction.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a3dmorteza/xterm.js-addon-direction.git"
+  },
+  "bugs": {
+    "url": "https://github.com/a3dmorteza/xterm.js-addon-direction/issues"
+  },
+  "homepage": "https://github.com/a3dmorteza/xterm.js-addon-direction",
+  "license": "MIT",
+  "keywords": [
+    "terminal",
+    "xterm",
+    "xterm.js",
+    "addon",
+    "rtl",
+    "right-to-left",
+    "direction",
+    "bidi",
+    "arabic",
+    "persian",
+    "hebrew"
+  ],
+  "workspaces": [
+    "demo",
+    "src"
+  ],
+  "scripts": {
+    "clean": "rimraf lib out demo/dist",
+    "build": "node bin/esbuild.mjs",
+    "build:watch": "node bin/esbuild.mjs --watch",
+    "build:prod": "node bin/esbuild.mjs --prod",
+    "build:prod:watch": "node bin/esbuild.mjs --prod --watch",
+    "build:demo:client": "node bin/esbuild.mjs --demo-client",
+    "build:demo:client:watch": "node bin/esbuild.mjs --demo-client --watch",
+    "build:demo:server": "node bin/esbuild.mjs --demo-server",
+    "build:demo:server:watch": "node bin/esbuild.mjs --demo-server --watch",
+    "demo": "node demo/start",
+    "demo:watch": "concurrently \"npm run build:demo:server:watch\" \"npm run demo\"",
+    "dev": "concurrently \"npm run build:watch\" \"npm run build:demo:server\" \"npm run build:demo:client:watch\" \"npm run demo\"",
+    "start": "npm run dev"
+  },
+  "peerDependencies": {
+    "@xterm/xterm": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.0.0",
+    "@types/express-ws": "^3.0.6",
+    "@types/node": "^25.0.10",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@xterm/addon-attach": "^0.12.0",
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/xterm": "^6.0.0",
+    "concurrently": "^9.2.1",
+    "copy-webpack-plugin": "^11.0.0",
+    "esbuild": "^0.27.2",
+    "eslint": "^9.0.0",
+    "express": "^4.0.0",
+    "express-ws": "^3.0.0",
+    "node-pty": "1.1.0-beta19",
+    "rimraf": "^5.0.5",
+    "source-map-loader": "^5.0.0",
+    "ts-loader": "^9.5.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

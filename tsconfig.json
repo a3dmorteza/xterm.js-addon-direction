@@ -1,0 +1,9 @@
+{
+  "files": [],
+  "include": [],
+  "exclude": ["node_modules", "out"],
+  "references": [
+    { "path": "./src" },
+    { "path": "./demo" }
+  ]
+}

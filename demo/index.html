@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xterm.js Direction Addon Demo</title>
+    <link rel="stylesheet" href="./xterm.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>@xterm/addon-direction Demo</h1>
+            <p class="subtitle">Switch between RTL (Right-to-Left) and LTR (Left-to-Right) modes in xterm.js</p>
+            <div class="status">
+                <div class="status-indicator active"></div>
+                <span>Addon Loaded Successfully</span>
+            </div>
+        </header>
+        
+        <div class="demo-area">
+            <div id="terminal-container">
+                <div id="terminal"></div>
+            </div>
+            
+            <div class="controls">
+                <h2>Direction Controls</h2>
+                
+                <div class="control-group">
+                    <h3>Set Direction</h3>
+                    <button id="set-ltr" class="btn ltr">Set LTR (Left-to-Right)</button>
+                    <button id="set-rtl" class="btn rtl">Set RTL (Right-to-Left)</button>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Test Commands</h3>
+                    <button id="write-ltr" class="btn">Write LTR Text</button>
+                    <button id="write-rtl" class="btn">Write RTL Text</button>
+                    <button id="write-mixed" class="btn">Write Mixed Text</button>
+                </div>
+                
+                <div class="control-group">
+                    <h3>Terminal Actions</h3>
+                    <button id="clear" class="btn">Clear Terminal</button>
+                    <button id="reset" class="btn">Reset Terminal</button>
+                </div>
+                
+                <div class="language-examples">
+                    <div class="language-box">
+                        <h4>LTR Languages</h4>
+                        <p>English, Spanish, French, German</p>
+                    </div>
+                    <div class="language-box">
+                        <h4>RTL Languages</h4>
+                        <p>Arabic, Persian, Hebrew, Urdu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2>How to Use the Direction Addon</h2>
+            <p>The Direction addon allows you to dynamically switch the text direction in xterm.js terminal. This is particularly useful for:</p>
+            <ul>
+                <li>Supporting RTL languages like Arabic, Persian, and Hebrew</li>
+                <li>Creating bilingual terminal applications</li>
+                <li>Testing terminal output in different text directions</li>
+            </ul>
+            
+            <div class="code-block">
+                // Basic Usage Example<br>
+                import { Terminal } from '@xterm/xterm';<br>
+                import { DirectionAddon } from '@a3dmorteza/xterm.js-addon-direction';<br><br>
+                
+                const terminal = new Terminal();<br>
+                const directionAddon = new DirectionAddon();<br>
+                terminal.loadAddon(directionAddon);<br>
+                terminal.open(containerElement);<br><br>
+                
+                // Switch to RTL mode<br>
+                directionAddon.setDirection('rtl');<br><br>
+                
+                // Switch to LTR mode<br>
+                directionAddon.setDirection('ltr');
+            </div>
+            
+            <p>Check the <a href="https://github.com/a3dmorteza/xterm.js-addon-direction" style="color: #007acc;">GitHub repository</a> for more advanced usage and API documentation.</p>
+        </div>
+    </div>
+    
+    <script src="./dist/client.bundle.js"></script>
+</body>
+</html>

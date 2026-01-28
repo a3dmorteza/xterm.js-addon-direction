@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2021",
+    "outDir": "../out-demo/client",
+    "rootDir": ".",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@a3dmorteza/xterm.js-addon-direction": ["../../typings/addon-direction.d.ts"],
+    }
+  },
+  "include": [
+    "./**/*"
+  ]
+}

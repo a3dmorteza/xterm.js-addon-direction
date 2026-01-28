@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2021",
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "rootDir": ".",
+    "outDir": "../out",
+    "sourceMap": true,
+    "removeComments": true,
+    "strict": true,
+    "paths": {
+      "@a3dmorteza/xterm.js-addon-direction": [
+        "../typings/addon-direction.d.ts"
+      ]
+    }
+  },
+  "include": [
+    "./**/*"
+  ]
+}
